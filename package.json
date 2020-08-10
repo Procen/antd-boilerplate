@@ -7,14 +7,24 @@
     "@testing-library/jest-dom": "^5.9.0",
     "@testing-library/react": "^10.2.1",
     "@testing-library/user-event": "^11.1.0",
+    "@types/lodash": "^4.14.159",
+    "@types/react-router-dom": "^5.1.5",
     "antd": "^4.5.2",
+    "axios": "^0.19.2",
+    "craco-antd": "^1.18.1",
     "craco-less": "^1.17.0",
+    "history": "^5.0.0",
+    "lodash": "^4.17.19",
+    "mobx": "^5.15.5",
+    "mobx-react": "^6.2.5",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "craco start",
+    "start": "BROWSER=none PORT=9000 craco start",
     "build": "craco build",
     "test": "craco test"
   },
@@ -32,5 +42,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@types/jest": "^26.0.9",
+    "@types/node": "^14.0.27",
+    "@types/react": "^16.9.44",
+    "@types/react-dom": "^16.9.8",
+    "typescript": "^3.9.7"
+  },
+  "proxy": "http://localhost:3000"
 }

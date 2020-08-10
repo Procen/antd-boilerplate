@@ -1,0 +1,404 @@
+// Atomic suppotrive styles
+
+
+// Display
+.d-b {
+  display: block;
+}
+.d-fx {
+  display: flex;
+}
+.d-ib {
+  display: inline-block;
+}
+.d-i {
+  display: inline;
+}
+.d-n {
+  display: none;
+}
+
+// Flex params
+.jc-c {
+  justify-content: center;
+}
+
+.jc-sb {
+  justify-content: space-between;
+}
+
+.jc-se {
+  justify-content: space-evenly;
+}
+
+.jc-sa {
+  justify-content: space-around;
+}
+
+.jc-fxs {
+  justify-content: flex-start;
+}
+
+.jc-fxe {
+  justify-content: flex-end;
+}
+
+.ai-c {
+  align-items: center;
+}
+
+.ac-c {
+  align-content: center;
+}
+
+.fxw-nw {
+  flex-wrap: nowrap;
+}
+
+.fxs-nos {
+  flex-shrink: 0;
+}
+
+.fxg-i {
+  flex-grow: inherit;
+}
+
+.fxg-1 {
+  flex-grow: 1;
+}
+
+.fxd-c {
+  flex-direction: column;
+}
+
+// Cursors
+.cursor-pointer {
+  cursor: pointer;
+}
+
+// Visibility
+.hidden {
+  visibility: hidden !important;
+}
+
+// Opacity
+.op-25 {
+  opacity: 0.25;
+}
+
+.op-20 {
+  opacity: 0.20;
+}
+
+.op-30 {
+  opacity: 0.3;
+}
+
+.op-40 {
+  opacity: 0.4;
+}
+
+.op-80 {
+  opacity: 0.8;
+}
+
+.op-90 {
+  opacity: 0.9;
+}
+
+// Height
+// %
+.h-100p {
+  height: 100%;
+}
+
+.h-550 {
+  height: 550px;
+}
+
+.h-720 {
+  height: 720px;
+}
+
+// width
+// %
+.w-100p {
+  width: 100%;
+}
+
+.w-50p {
+  width: 50%;
+}
+// px
+.w-300 {
+  width: 300px;
+}
+
+.w-160 {
+  // width: 160px;
+}
+
+.w-350 {
+  width: 350px;
+}
+
+.w-400 {
+  width: 400px;
+}
+
+.mw-250 {
+  min-width: 250px;
+}
+
+// Text align
+.ta-c {
+  text-align: center;
+}
+
+.ta-l {
+  text-align: left;
+}
+
+.ta-r {
+  text-align: right;
+}
+
+// Vertical align
+.va-middle {
+  vertical-align: middle;
+}
+.va-tb {
+  vertical-align: text-bottom;
+}
+
+// Text transform
+.tt-uc {
+  text-transform: uppercase;
+}
+
+// White space styles
+.ws-nw {
+  white-space: nowrap;
+}
+
+// Font size
+@each $size in (10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100, 110, 120) {
+  .fs-#{$size} {
+    font-size: #{$size}px !important;
+  }
+}
+// Font weight
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+// Z-Index
+.z-1 {
+  z-index: 1;
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+$colours: (violet pink red green blue yellow cian white grey);
+@each $colr in $colours {
+  .#{$colr}-bg {
+    background-color: $colr;
+  }
+  .text-#{$colr} {
+    color: $colr;
+  }
+}
+
+.text-purple-light {
+  color: #BDBECF
+}
+.red-dark-bg {
+  background-color: #d3618e;
+}
+.text-underline {
+  text-decoration: underline;
+}
+.text-underline-0 {
+  text-decoration: none;
+}
+.light-grey-bg {
+  background-color: #f5f6fa;
+}
+
+
+
+// Padding
+$dim_list: (0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 30 35 40 45 50 55 65 70 75 80 85 90 95 100 125 145 200 250 400);
+
+$ext_plist: ("p": "padding",
+           "pl": "padding-left",
+           "pr": "padding-right",
+           "pt": "padding-top",
+           "pb": "padding-bottom" );
+
+@each $class, $style in $ext_plist {
+  @each $size in $dim_list {
+    .#{$class}-#{$size} {
+      #{$style}: #{$size}px;
+    }
+  }
+}
+
+@each $size in $dim_list {
+  .p-#{$size} {
+    padding: #{$size}px !important;
+  }
+}
+
+@each $size in $dim_list {
+  .size-#{$size} {
+    width: #{$size}px;
+    height: #{$size}px;
+  }
+  .width-#{$size} {
+    width: #{$size}px;
+  }
+  .height-#{$size} {
+    height: #{$size}px;
+  }
+}
+
+@each $size in $dim_list {
+  .py-#{$size} {
+    padding-top: #{$size}px;
+    padding-bottom: #{$size}px;
+  }
+}
+
+@each $size in $dim_list {
+  .px-#{$size} {
+    padding-left: #{$size}px;
+    padding-right: #{$size}px;
+  }
+}
+
+// Margin
+.ml-a {
+  margin-left: auto;
+}
+
+.m-a {
+  margin: auto;
+}
+
+.m0-a {
+  margin: 0 auto;
+}
+
+.mr-a {
+  margin-right: auto;
+}
+
+$ext_mlist: ("m": "margin",
+            "ml": "margin-left",
+            "mr": "margin-right",
+            "mt": "margin-top",
+            "mb": "margin-bottom" );
+
+@each $class, $style in $ext_mlist {
+  @each $size in $dim_list {
+    .#{$class}-#{$size} {
+      #{$style}: #{$size}px !important;
+    }
+    .#{$class}-n#{$size} {
+      #{$style}: -#{$size}px !important;
+    }
+  }
+}
+
+@each $size in $dim_list {
+  .m-#{$size} {
+    margin: #{$size}px;
+  }
+}
+
+@each $size in $dim_list {
+  .my-#{$size} {
+    margin-top: #{$size}px;
+    margin-bottom: #{$size}px;
+  }
+}
+
+@each $size in $dim_list {
+  .mx-#{$size} {
+    margin-left: #{$size}px;
+    margin-right: #{$size}px;
+  }
+}
+
+.inherit-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+@each $size in $dim_list {
+  .m-#{$size} {
+    margin: #{$size}px;
+  }
+}
+
+@each $size in $dim_list {
+  .my-#{$size} {
+    margin-top: #{$size}px;
+    margin-bottom: #{$size}px;
+  }
+}
+
+@each $size in $dim_list {
+  .mx-#{$size} {
+    margin-left: #{$size}px;
+    margin-right: #{$size}px;
+  }
+}
+
+.inherit-link {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.br-none {
+  border: none;
+}
+
+.box-sh-none {
+  box-shadow: none;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.of-y-scroll {
+  overflow: scroll;
+}
+
+.of-y-auto {
+  overflow-y: auto;
+}
+
+.fw-b {
+  font-weight: bold;
+}

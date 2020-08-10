@@ -1,0 +1,11 @@
+#root {
+  height: 100%;
+
+  .app-container {
+    height: 100%;
+
+    .unauthorized-container, .container {
+      height: 100%;
+    }
+  }
+}
